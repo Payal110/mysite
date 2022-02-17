@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content%}
+    
+{% for d in data %}
+<div class="card" style="width: 18rem;">
+     <div class="card-body">
+       <h5 class="card-title">{{d.name}}</h5>
+       <h6 class="card-subtitle mb-2 text-muted"></h6>
+       <p class="card-text"> {{d.desc}}</p>
+       <a href="#" class="card-link">Card link</a>
+       {% if d.button < 10 %}
+       <a href="payal/?name={{d.title}}" class="card-link">go somewhere</a>
+       {% else %}
+       <a href="payal/?name={{d.title}}" class="card-link">go </a>
+       {% endif %}
+     </div>
+   </div>
+{% endfor %}
+      
+{% endblock %}
